@@ -15,11 +15,19 @@ import {
 import { grey } from "@mui/material/colors";
 import PropTypes from "prop-types";
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Meal = (props) => {
    const { loading = false } = props;
-   let { strMeal, strCategory, strMealThumb, strTags, strInstructions } =
-      props.meal;
+   let {
+      strMeal,
+      strCategory,
+      strMealThumb,
+      strTags,
+      strInstructions,
+      idMeal,
+   } = props.meal;
+   const mealUrl = `meal/${idMeal}`;
    return (
       <div>
          <Card
@@ -123,6 +131,9 @@ const Meal = (props) => {
                   </Typography>
                )}
             </CardContent>
+            <NavLink to={mealUrl}>
+               <button>See More..</button>
+            </NavLink>
          </Card>
       </div>
    );
