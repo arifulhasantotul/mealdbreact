@@ -3,6 +3,7 @@ import "./App.css";
 import About from "./components/About/About";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
+import MealDetails from "./components/MealDetails/MealDetails";
 import Meals from "./components/Meals/Meals";
 import NotFound from "./components/NotFound/NotFound";
 
@@ -25,6 +26,10 @@ function App() {
             {/* route 3  */}
             <Route path="/meals">
                <Meals></Meals>
+            </Route>
+            {/* route  */}
+            <Route path="/meal/:mealId">
+               <MealDetails></MealDetails>
             </Route>
 
             {/* route 4  */}
